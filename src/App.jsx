@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom';
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,10 +12,13 @@ function App() {
 
   return (
     <>
-     <div className="app">
-     <Header />
-     <Footer />
-     </div>
+      <div className="app">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
